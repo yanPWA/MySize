@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MySize</string>
+    <string name="neck">首周り</string>
+    <string name="waist">胴回り</string>
+    <string name="sleeve">裄丈</string>
+    <string name="inseam">股下</string>
+    <string name="save">保存</string>
+    <string name="saveToast">保存しました</string>
+    <string name="unit">%s cm</string>
+    <string name="name">名前</string>
+    <string name="weight">体重</string>
+    <string name="editWeightHint">体重を入力して下さい</string>
+    <string name="height">身長</string>
+    <string name="editHeightHint">身長を入力して下さい</string>
+    <string name="bmi">BMI</string>
+    <string name="editNameHint">名前を入力して下さい</string>
+    <string name="culBmi">身長、体重が未入力</string>
+    <string name="culBmiNoHeight">身長が未入力</string>
+    <string name="culBmiNoWeight">体重が未入力</string>
+
+</resources>

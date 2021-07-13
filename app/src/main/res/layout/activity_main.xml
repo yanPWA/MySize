@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/mainLayout"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_imageview_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_imageview_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_imageview_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_end"
+            app:layout_constraintEnd_toEndOf="@id/guideline_imageview_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mysize" />
+
+        <EditText
+            android:id="@+id/neck"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/neck"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toStartOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/imageView" />
+
+        <EditText
+            android:id="@+id/waist"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/waist"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
+            app:layout_constraintEnd_toStartOf="@id/imageView" />
+
+        <EditText
+            android:id="@+id/sleeve"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/sleeve"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/imageView" />
+
+        <EditText
+            android:id="@+id/inseam"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/inseam"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/save"
+            app:layout_constraintTop_toBottomOf="@id/inputBmi"
+            app:layout_constraintEnd_toEndOf="@id/guideline_imageview_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start"
+            app:layout_constraintTop_toTopOf="@id/guideline_horizontal_end" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:hint="@string/editNameHint"
+            app:layout_constraintBottom_toBottomOf="@id/name"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toTopOf="@id/name"
+            tools:text="Akiko Fujita" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/weight"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start"
+            app:layout_constraintTop_toBottomOf="@id/editName" />
+
+        <EditText
+            android:id="@+id/editWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="@string/editWeightHint"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:layout_constraintBottom_toBottomOf="@id/weight"
+            app:layout_constraintStart_toEndOf="@id/weight"
+            app:layout_constraintTop_toTopOf="@id/weight"
+            tools:text="30" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/height"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start"
+            app:layout_constraintTop_toBottomOf="@id/editWeight" />
+
+        <EditText
+            android:id="@+id/editHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:hint="@string/editHeightHint"
+            app:layout_constraintBottom_toBottomOf="@id/height"
+            app:layout_constraintStart_toEndOf="@id/weight"
+            app:layout_constraintTop_toTopOf="@id/height"
+            tools:text="180" />
+
+        <TextView
+            android:id="@+id/bmi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/bmi"
+            app:layout_constraintStart_toStartOf="@id/guideline_imageview_start"
+            app:layout_constraintTop_toBottomOf="@+id/height" />
+
+        <TextView
+            android:id="@+id/inputBmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="@id/bmi"
+            app:layout_constraintStart_toEndOf="@id/bmi"
+            app:layout_constraintTop_toTopOf="@id/bmi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
